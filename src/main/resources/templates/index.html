@@ -74,6 +74,10 @@ body {
 					</li>
 					<li class="nav-item"><a class="nav-link"
 						th:href="@{/showNewProductForm}">Add Product</a></li>
+							<!-- Trang Chinnh -->
+						<li class="nav-item"><a class="nav-link"
+						th:href="@{/support}">Hỗ trợ</a></li>
+						
 					<!-- Hiển thị Login nếu chưa đăng nhập -->
 					<a th:if="${session.username != null}" href="/logout"
 						class="logout-btn">Logout</a>

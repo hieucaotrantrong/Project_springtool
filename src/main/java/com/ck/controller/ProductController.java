@@ -51,6 +51,7 @@ public class ProductController {
 
 	}
 
+
 	@PostMapping("/saveProduct")
 	public RedirectView saveProduct(@ModelAttribute("product") Product product,
 			@RequestParam("image") MultipartFile muiMultipartFile) throws IOException {
