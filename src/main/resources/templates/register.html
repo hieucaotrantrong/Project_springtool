@@ -39,30 +39,30 @@
 <div class="container">
     <div class="card">
         <div class="card-header">
-            <strong>Register</strong>
+            <strong>Đăng Kí</strong>
         </div>
         <div class="card-body">
             <form th:action="@{/register}" method="post">
                 <div class="mb-3">
-                    <label for="username" class="form-label">Username</label>
+                    <label for="username" class="form-label">Tên Tài Khoản</label>
                     <input type="text" id="username" name="username" class="form-control" placeholder="Enter Username" required>
                 </div>
                 <div class="mb-3">
-                    <label for="password" class="form-label">Password</label>
+                    <label for="password" class="form-label">Mật Khẩu</label>
                     <input type="password" id="password" name="password" class="form-control" placeholder="Enter Password" required>
                 </div>
                 <div class="mb-3">
-                    <label for="confirmPassword" class="form-label">Confirm Password</label>
-                    <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" placeholder="Confirm Password" required>
+                    <label for="confirmPassword" class="form-label">Xác nhận mật khẩu</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" placeholder="Nhập lại mật khẩu" required>
                 </div>
-                <button type="submit" class="btn btn-primary w-100">Register</button>
+                <button type="submit" class="btn btn-primary w-100">Đăng kí</button>
             </form>
             <p th:if="${param.error}" class="text-danger mt-3" th:switch="${param.error}">
                 <span th:case="user_exists">Username already exists. Please choose another one.</span>
                 <span th:case="password_mismatch">Passwords do not match. Please try again.</span>
             </p>
             <div class="text-center mt-3">
-                <p>Already have an account? <a th:href="@{/login}">Login here</a></p>
+                <p>Bạn đã có tài khoản? <a th:href="@{/login}">Đăng Nhập</a></p>
             </div>
         </div>
     </div>

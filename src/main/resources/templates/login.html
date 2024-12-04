@@ -58,7 +58,7 @@
 </head>
 <body>
     <div class="login-container">
-        <h2>Login</h2>
+        <h2>Đăng Nhập</h2>
         <form th:action="@{/login}" method="post">
             <div class="mb-3">
                 <input type="text" name="username" class="form-control" placeholder="Username" required>
@@ -66,11 +66,11 @@
             <div class="mb-3">
                 <input type="password" name="password" class="form-control" placeholder="Password" required>
             </div>
-            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="submit" class="btn btn-primary">Đăng Nhập</button>
         </form>
-        <p th:if="${param.error}" class="text-danger mt-3">Invalid username or password!</p>
+        <p th:if="${param.error}" class="text-danger mt-3">Tên người dùng hoặc mật khẩu không hợp lệ!</p>
         <div class="register-link">
-            <p>Don't have an account? <a th:href="@{/register}">Register here</a></p>
+            <p>Bạn chưa có tài khoản? <a th:href="@{/register}">Đăng kí</a></p>
         </div>
     </div>
 </body>

@@ -15,14 +15,13 @@
 <style>
 /* Làm cho nút Logout luôn hiển thị rõ ràng */
 .logout-btn {
-	margin-top:8px;
-	margin-left:5px; /* Điều chỉnh khoảng cách xuống */
+	margin-top: 8px;
+	margin-left: 5px; /* Điều chỉnh khoảng cách xuống */
 	color: white; /* Màu chữ trắng */
 	font-weight: bold;
 	display: inline-block;
 	text-decoration: none; /* Loại bỏ gạch chân nếu có */
 }
-
 
 body {
 	font-family: 'Arial', sans-serif;
@@ -83,9 +82,11 @@ body {
 				</ul>
 			</div>
 		</div>
+	
 	</nav>
-
+ <div th:insert="slider :: slider"></div>
 	<!-- Main Content -->
+
 	<div class="container">
 		<div class="d-flex justify-content-between align-items-center mb-3">
 			<h1>Product List</h1>
@@ -129,8 +130,8 @@ body {
 					<td th:text="${product.id}"></td>
 					<td th:text="${product.productName}"></td>
 					<td th:text="${product.price}"></td>
-					<td><img th:src="@{${product.photos}}" class="img-round"
-						alt="No Image" width="100" height="60"></td>
+					<td><img th:src="@{/product-photos/{id}/{photo}(id=${product.id}, photo=${product.photos})}" alt="Product Image" width="50" height="50" />
+					</td>
 					<td><a th:href="@{/showFormForUpdate/{id}(id=${product.id})}"
 						class="btn btn-primary btn-sm">Update</a></td>
 					<td><a th:href="@{/deleteProduct/{id}(id=${product.id})}"
@@ -164,4 +165,6 @@ body {
 		</div>
 	</div>
 </body>
+<div th:insert="footer :: footer"></div>
+
 </html>

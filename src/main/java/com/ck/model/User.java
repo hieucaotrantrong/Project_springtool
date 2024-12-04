@@ -22,7 +22,7 @@ public class User {
     private String password;
 
     @Column(nullable = false)
-    private String role;  // Vai trò: ADMIN hoặc USER
+    private String role;  
 
     // Getters và Setters
     public long getId() {

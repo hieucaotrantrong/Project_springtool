@@ -21,5 +21,5 @@ public static void SaveFile(String uploadDir,String fileName,MultipartFile multi
 	}catch(IOException ioe) {
 		throw new IOException("Could not save image file:"+fileName,ioe);
 	}
-}
+} 
 }
