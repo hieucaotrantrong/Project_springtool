@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Giới Thiệu Về Website</title>
+<!-- Thêm Bootstrap cho giao diện đẹp -->
+<link
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+	rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+	rel="stylesheet">
+<style>
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #f8f9fa;
+}
+
+.navbar {
+	background-color: #007bff;
+}
+
+.navbar-brand, .nav-link {
+	font-weight: bold;
+}
+
+.hero-section {
+	background:
+		url('https://png.pngtree.com/background/20211215/original/pngtree-line-light-effect-square-blue-technology-banner-picture-image_1493640.jpg')
+		no-repeat center center;
+	background-size: cover;
+	color: white;
+	padding: 100px 0;
+	text-align: center;
+}
+
+.hero-section h1 {
+	font-size: 3rem;
+	font-weight: 700;
+}
+
+.hero-section p {
+	font-size: 1.2rem;
+	margin-bottom: 30px;
+}
+
+.feature-section {
+	padding: 50px 0;
+}
+
+.feature-card {
+	border: 1px solid #e0e0e0;
+	border-radius: 8px;
+	padding: 30px;
+	text-align: center;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+	transform: translateY(-10px);
+}
+
+.feature-card h5 {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.contact-section {
+	background-color: #007bff;
+	color: white;
+	padding: 50px 0;
+}
+
+.contact-section h2 {
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+.contact-form input, .contact-form textarea {
+	border-radius: 5px;
+	padding: 10px;
+	margin-bottom: 15px;
+	width: 100%;
+}
+
+.contact-form button {
+	background-color: #28a745;
+	border: none;
+	padding: 10px 20px;
+	font-size: 1.2rem;
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.contact-form button:hover {
+	background-color: #218838;
+}
+</style>
+</head>
+<body>
+
+	<!-- Thanh điều hướng -->
+	<nav class="navbar navbar-expand-lg navbar-dark">
+	
+		<div class="container">
+		
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+			
+				data-target="#navbarNav" aria-controls="navbarNav"
+				aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ml-auto">
+				
+					<li class="nav-item"><a class="nav-link" href="">Giới
+							Thiệu</a></li>
+					<li class="nav-item"><a class="nav-link" href="/register">Đăng
+							Ký</a></li>
+					<li class="nav-item"><a class="nav-link" href="/login">Đăng
+							Nhập</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Hero Section -->
+	<div class="hero-section">
+		<h1>Chào Mừng Đến Với TuesDays ProductList</h1>
+		<p>Chúng tôi cung cấp các sản phẩm chất lượng, dịch vụ tuyệt vời
+			và mang đến trải nghiệm mua sắm tuyệt vời cho khách hàng!</p>
+		<a class="btn btn-primary" href="/productPage" role="button">Khám
+			Phá Sản Phẩm</a>
+	</div>
+
+	<!-- Phần Giới Thiệu -->
+	<div class="container feature-section">
+		<h2 class="text-center mb-5">Những Tính Năng Nổi Bật</h2>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="feature-card">
+					<h5>Chất Lượng Cao</h5>
+					<p>Chúng tôi cam kết cung cấp các sản phẩm với chất lượng vượt
+						</p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="feature-card">
+					<h5>Dịch Vụ Tận Tâm</h5>
+					<p>Chúng tôi luôn sẵn sàng hỗ trợ khách hàng 24/7 để đảm bảo
+					</p>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="feature-card">
+					<h5>Chất lượng bảo mật</h5>
+					<p>Chúng tôi cung cấp chất lượng bảo mật tốt nhất thế giới tới
+						thời điểm hiện tại.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="text-center text-lg-start bg-body-tertiary text-muted">
+		<!-- Section: Social media -->
+		<section
+			class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+			<!-- Left -->
+			<div class="me-5 d-none d-lg-block">
+				<span>Get connected with us on social networks:</span>
+			</div>
+			<!-- Left -->
+
+			<!-- Right -->
+			<div>
+				<a href="" class="me-4 text-reset"> <i class="fab fa-facebook-f"></i>
+				</a> <a href="" class="me-4 text-reset"> <i class="fab fa-twitter"></i>
+				</a> <a href="" class="me-4 text-reset"> <i class="fab fa-google"></i>
+				</a> <a href="" class="me-4 text-reset"> <i class="fab fa-instagram"></i>
+				</a> <a href="" class="me-4 text-reset"> <i class="fab fa-linkedin"></i>
+				</a> <a href="" class="me-4 text-reset"> <i class="fab fa-github"></i>
+				</a>
+			</div>
+			<!-- Right -->
+		</section>
+		<!-- Section: Social media -->
+
+		<!-- Section: Links  -->
+		<section class="">
+			<div class="container text-center text-md-start mt-5">
+				<!-- Grid row -->
+				<div class="row mt-3">
+					<!-- Grid column -->
+					<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+						<!-- Content -->
+						<h6 class="text-uppercase fw-bold mb-4">
+							<i class="fas fa-gem me-3"></i>Company name
+						</h6>
+						<p>Here you can use rows and columns to organize your footer
+							content. Lorem ipsum dolor sit amet, consectetur adipisicing
+							elit.</p>
+					</div>
+					<!-- Grid column -->
+
+					<!-- Grid column -->
+					<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+						<!-- Links -->
+						<h6 class="text-uppercase fw-bold mb-4">Products</h6>
+						<p>
+							<a href="#!" class="text-reset">Angular</a>
+						</p>
+						<p>
+							<a href="#!" class="text-reset">React</a>
+						</p>
+						<p>
+							<a href="#!" class="text-reset">Vue</a>
+						</p>
+						<p>
+							<a href="#!" class="text-reset">Laravel</a>
+						</p>
+					</div>
+					<!-- Grid column -->
+
+					<!-- Grid column -->
+					<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+						<!-- Links -->
+						<h6 class="text-uppercase fw-bold mb-4">Useful links</h6>
+						<p>
+							<a href="#!" class="text-reset">Pricing</a>
+						</p>
+						<p>
+							<a href="#!" class="text-reset">Settings</a>
+						</p>
+						<p>
+							<a href="#!" class="text-reset">Orders</a>
+						</p>
+						<p>
+							<a href="#!" class="text-reset">Help</a>
+						</p>
+					</div>
+					<!-- Grid column -->
+
+					<!-- Grid column -->
+					<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+						<!-- Links -->
+						<h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+						<p>
+							<i class="fas fa-home me-3"></i>Da Nang, NY 2004, DN
+						</p>
+						<p>
+							<i class="fas fa-envelope me-3"></i> caohieu241210@gmail.com
+						</p>
+						<p>
+							<i class="fas fa-phone me-3"></i> 0399999999
+						</p>
+						<p>
+							<i class="fas fa-print me-3"></i> 0399999999
+						</p>
+					</div>
+					<!-- Grid column -->
+				</div>
+				<!-- Grid row -->
+			</div>
+		</section>
+		<!-- Section: Links  -->
+
+		<!-- Copyright -->
+		<div class="text-center p-4"
+			style="background-color: rgba(0, 0, 0, 0.05);">
+			2024 No 1: <a class="text-reset fw-bold" href="https://TuesDay.com/">Bản
+				Quyền Thuộc Về TuesDays</a>
+		</div>
+		<!-- Copyright -->
+	</footer>
+	<!-- Thêm Bootstrap JS và jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
